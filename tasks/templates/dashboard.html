@@ -5,10 +5,8 @@
 {% block content %}
 <h1>Welcome {{ user.username }}</h1>
 
-<p>Search Task by Keyword, due date, priority, category</p>
-<p>Tasks</p>
-<p>Add Task button</p>
-<p>view profile</p>
+<a href="{% url 'add_task' %}" class="btn btn-primary" >Add Task +</a>
+
 
 {% endblock %}
 

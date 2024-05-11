@@ -41,7 +41,7 @@ class Task(models.Model):
     title = models.CharField(max_length=100, help_text='The title of the task')
     description = models.TextField(help_text='The description of the task')
     due_date = models.DateField(default=date.today, help_text='The due date of the task')
-    completed = models.BooleanField(help_text='Whether the task is completed or not')
+    completed = models.BooleanField(default=False, help_text='Whether the task is completed or not')
     priority_level = models.IntegerField(choices=PRIORITY_CHOICES, default=MEDIUM, help_text='The priority of the task')
 
 

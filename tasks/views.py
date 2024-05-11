@@ -4,7 +4,7 @@ from django.contrib.auth import login, logout, authenticate
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.decorators import login_required
 from .models import CustomUserModel, Task, Tag
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, TaskForm
 
 def index(request):
     """
@@ -56,6 +56,26 @@ def log_out(request):
     logout(request)
     messages.success(request, 'You have been logged out')
     return redirect('index')
+
+@login_required
+def add_task(request):
+    """
+    View for adding a task. Upon creation of task, user is redirected to 
+    their dashboard with a success message
+    """
+    user = request.user
+
+    if request.method == 'POST':
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            task = form.save(commit=False)
+            task.user = request.user
+            task.save()
+            messages.success(request, 'Task added!')
+            return redirect('dashboard')
+    else:
+        form = TaskForm()
+    return render(request, 'add_task.html', {'user':user, 'form':form})
 
 def task_list(request):
     """

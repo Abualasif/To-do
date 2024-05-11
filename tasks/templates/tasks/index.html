@@ -3,11 +3,10 @@
 {% block title %}Welcome to Tasks{% endblock %}
 
 {% block content %}
-
-
+    
     {% if messages %}
         {% for message in messages %}
-            <div class="alert alert-success">
+            <div>
                 <strong>{{ message }}</strong>
             </div>
         {% endfor %}
