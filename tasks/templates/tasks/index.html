@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome to Tasks{% endblock %}
+
+{% block content %}
+
+
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success">
+                <strong>{{ message }}</strong>
+            </div>
+        {% endfor %}
+    {% endif %}
+
+    <div>
+        <h1>Welcome to Tasks App</h1>
+        <p>This is a simple app to manage your tasks effectively.</p>
+        <div>
+        <a href="{% url 'sign_up' %}">Sign Up</a>
+        <a href="{% url 'log_in' %}">Login</a>
+        </div>
+    </div>
+{% endblock %}
+

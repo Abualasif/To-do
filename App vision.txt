@@ -1,0 +1,41 @@
+User Stories:
+- I want to be able to create a to do list item
+- i want to be able to mark an item as complete
+- I want to be able to add a time and date for tasks
+- I want to be able to view the tasks i have due 
+- I want to be able to view the tasks i have due in the coming weeks and months at a glance
+- I want to be able view the details of a task
+- I want to be able to delete a task
+- I want to be able to update a task
+
+Additional Features:
+User Authentication:
+	Allow users to sign up, sign in, and manage their accounts.
+	Implement user authentication to ensure user data privacy and security.
+Task Categories and Tags:
+	Allow users to categorize tasks by adding tags or labels.
+	Implement filtering and sorting options based on categories and tags.
+Priority Levels:
+	Allow users to set priority levels (e.g., high, medium, low) for tasks.
+	Implement sorting options based on priority levels.
+Reminders and Notifications:
+	Allow users to set reminders and receive notifications for upcoming tasks.
+	Implement email, SMS, or in-app notifications.
+Recurring Tasks:
+	Allow users to create recurring tasks (e.g., daily, weekly, monthly).
+	Implement options for editing or canceling recurring tasks.
+Collaboration and Sharing:
+	Allow users to share tasks or entire to-do lists with others.
+	Implement collaboration features such as assigning tasks to team members.
+Attachments and Notes:
+	Allow users to attach files or add notes to tasks.
+	Implement a rich text editor for adding detailed descriptions or notes.
+Calendar View:
+	Provide a calendar view to visualize tasks based on due dates.
+	Implement drag-and-drop functionality for easy task scheduling.
+Offline Access:
+	Allow users to access and manage tasks even when they're offline.
+	Implement local storage and synchronization when the user comes back online.
+Data Export and Import:
+	Allow users to export their tasks or to-do lists to different formats (e.g., CSV, JSON).
+	Implement options for importing tasks from other applications or formats.
